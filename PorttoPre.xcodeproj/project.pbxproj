@@ -10,12 +10,15 @@
 		04703A08ED954519E8201493 /* Pods_PorttoPre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1DABA99FB82ABE08C1D22B /* Pods_PorttoPre.framework */; };
 		3402BAE6299A121100505471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAE5299A121100505471 /* AppDelegate.swift */; };
 		3402BAE8299A121100505471 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAE7299A121100505471 /* SceneDelegate.swift */; };
-		3402BAEA299A121100505471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAE9299A121100505471 /* ViewController.swift */; };
 		3402BAEF299A121200505471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402BAEE299A121200505471 /* Assets.xcassets */; };
 		3402BAF2299A121200505471 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402BAF0299A121200505471 /* LaunchScreen.storyboard */; };
 		3402BAFD299A121200505471 /* PorttoPreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAFC299A121200505471 /* PorttoPreTests.swift */; };
 		3402BB07299A121200505471 /* PorttoPreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB06299A121200505471 /* PorttoPreUITests.swift */; };
 		3402BB09299A121200505471 /* PorttoPreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB08299A121200505471 /* PorttoPreUITestsLaunchTests.swift */; };
+		3402BB17299A168300505471 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB16299A168300505471 /* Coordinator.swift */; };
+		3402BB19299A16EF00505471 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB18299A16EF00505471 /* AppCoordinator.swift */; };
+		3402BB1C299A203B00505471 /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB1B299A203B00505471 /* AssetListViewController.swift */; };
+		3402BB1E299A20DA00505471 /* AssetListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB1D299A20DA00505471 /* AssetListCoordinator.swift */; };
 		9BF9BD991E60DBB3C780C117 /* Pods_PorttoPreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B2347EDD7B4882CAA58B7 /* Pods_PorttoPreTests.framework */; };
 		F3948C9217CD7D7D09D7A74F /* Pods_PorttoPre_PorttoPreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71216E59BDB8A5AC1E4598B /* Pods_PorttoPre_PorttoPreUITests.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +45,6 @@
 		3402BAE2299A121100505471 /* PorttoPre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PorttoPre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402BAE5299A121100505471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3402BAE7299A121100505471 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3402BAE9299A121100505471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3402BAEE299A121200505471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3402BAF1299A121200505471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3402BAF3299A121200505471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		3402BB02299A121200505471 /* PorttoPreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorttoPreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402BB06299A121200505471 /* PorttoPreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorttoPreUITests.swift; sourceTree = "<group>"; };
 		3402BB08299A121200505471 /* PorttoPreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorttoPreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3402BB16299A168300505471 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3402BB18299A16EF00505471 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3402BB1B299A203B00505471 /* AssetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListViewController.swift; sourceTree = "<group>"; };
+		3402BB1D299A20DA00505471 /* AssetListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListCoordinator.swift; sourceTree = "<group>"; };
 		4D9A894A43FFA91268AD41A4 /* Pods-PorttoPre-PorttoPreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5EEC31DEE7B93868B2106204 /* Pods-PorttoPreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPreTests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPreTests/Pods-PorttoPreTests.release.xcconfig"; sourceTree = "<group>"; };
 		60A17A09ADED8844997ABADD /* Pods-PorttoPre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre/Pods-PorttoPre.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +122,8 @@
 			children = (
 				3402BAE5299A121100505471 /* AppDelegate.swift */,
 				3402BAE7299A121100505471 /* SceneDelegate.swift */,
-				3402BAE9299A121100505471 /* ViewController.swift */,
+				3402BB15299A166900505471 /* Coordinator */,
+				3402BB1A299A17DD00505471 /* ViewControllers */,
 				3402BAEE299A121200505471 /* Assets.xcassets */,
 				3402BAF0299A121200505471 /* LaunchScreen.storyboard */,
 				3402BAF3299A121200505471 /* Info.plist */,
@@ -139,6 +146,32 @@
 				3402BB08299A121200505471 /* PorttoPreUITestsLaunchTests.swift */,
 			);
 			path = PorttoPreUITests;
+			sourceTree = "<group>";
+		};
+		3402BB15299A166900505471 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB16299A168300505471 /* Coordinator.swift */,
+				3402BB18299A16EF00505471 /* AppCoordinator.swift */,
+				3402BB1D299A20DA00505471 /* AssetListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3402BB1A299A17DD00505471 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB1F299A220A00505471 /* AssetList */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3402BB1F299A220A00505471 /* AssetList */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB1B299A203B00505471 /* AssetListViewController.swift */,
+			);
+			path = AssetList;
 			sourceTree = "<group>";
 		};
 		ABD0B0021CD1915A55F61A4F /* Frameworks */ = {
@@ -366,7 +399,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3402BAEA299A121100505471 /* ViewController.swift in Sources */,
+				3402BB1C299A203B00505471 /* AssetListViewController.swift in Sources */,
+				3402BB17299A168300505471 /* Coordinator.swift in Sources */,
+				3402BB1E299A20DA00505471 /* AssetListCoordinator.swift in Sources */,
+				3402BB19299A16EF00505471 /* AppCoordinator.swift in Sources */,
 				3402BAE6299A121100505471 /* AppDelegate.swift in Sources */,
 				3402BAE8299A121100505471 /* SceneDelegate.swift in Sources */,
 			);
