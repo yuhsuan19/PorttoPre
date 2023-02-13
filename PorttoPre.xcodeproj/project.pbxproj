@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04703A08ED954519E8201493 /* Pods_PorttoPre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1DABA99FB82ABE08C1D22B /* Pods_PorttoPre.framework */; };
 		3402BAE6299A121100505471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAE5299A121100505471 /* AppDelegate.swift */; };
 		3402BAE8299A121100505471 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAE7299A121100505471 /* SceneDelegate.swift */; };
 		3402BAEA299A121100505471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAE9299A121100505471 /* ViewController.swift */; };
-		3402BAED299A121100505471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402BAEB299A121100505471 /* Main.storyboard */; };
 		3402BAEF299A121200505471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402BAEE299A121200505471 /* Assets.xcassets */; };
 		3402BAF2299A121200505471 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402BAF0299A121200505471 /* LaunchScreen.storyboard */; };
 		3402BAFD299A121200505471 /* PorttoPreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BAFC299A121200505471 /* PorttoPreTests.swift */; };
 		3402BB07299A121200505471 /* PorttoPreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB06299A121200505471 /* PorttoPreUITests.swift */; };
 		3402BB09299A121200505471 /* PorttoPreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB08299A121200505471 /* PorttoPreUITestsLaunchTests.swift */; };
+		9BF9BD991E60DBB3C780C117 /* Pods_PorttoPreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B2347EDD7B4882CAA58B7 /* Pods_PorttoPreTests.framework */; };
+		F3948C9217CD7D7D09D7A74F /* Pods_PorttoPre_PorttoPreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71216E59BDB8A5AC1E4598B /* Pods_PorttoPre_PorttoPreUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B1DABA99FB82ABE08C1D22B /* Pods_PorttoPre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PorttoPre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402BAE2299A121100505471 /* PorttoPre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PorttoPre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402BAE5299A121100505471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3402BAE7299A121100505471 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3402BAE9299A121100505471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3402BAEC299A121100505471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3402BAEE299A121200505471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3402BAF1299A121200505471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3402BAF3299A121200505471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 		3402BB02299A121200505471 /* PorttoPreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorttoPreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402BB06299A121200505471 /* PorttoPreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorttoPreUITests.swift; sourceTree = "<group>"; };
 		3402BB08299A121200505471 /* PorttoPreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorttoPreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D9A894A43FFA91268AD41A4 /* Pods-PorttoPre-PorttoPreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5EEC31DEE7B93868B2106204 /* Pods-PorttoPreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPreTests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPreTests/Pods-PorttoPreTests.release.xcconfig"; sourceTree = "<group>"; };
+		60A17A09ADED8844997ABADD /* Pods-PorttoPre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre/Pods-PorttoPre.release.xcconfig"; sourceTree = "<group>"; };
+		A59B96D39BA4912D2BADD5F7 /* Pods-PorttoPreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPreTests.debug.xcconfig"; path = "Target Support Files/Pods-PorttoPreTests/Pods-PorttoPreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C11B2347EDD7B4882CAA58B7 /* Pods_PorttoPreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PorttoPreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F3AD7DC3F3EBE6DC70050C /* Pods-PorttoPre-PorttoPreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre-PorttoPreUITests.debug.xcconfig"; path = "Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D71216E59BDB8A5AC1E4598B /* Pods_PorttoPre_PorttoPreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PorttoPre_PorttoPreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9154BADB6C8EB01EC1858AE /* Pods-PorttoPre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre.debug.xcconfig"; path = "Target Support Files/Pods-PorttoPre/Pods-PorttoPre.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04703A08ED954519E8201493 /* Pods_PorttoPre.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF9BD991E60DBB3C780C117 /* Pods_PorttoPreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3948C9217CD7D7D09D7A74F /* Pods_PorttoPre_PorttoPreUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,8 @@
 				3402BAFB299A121200505471 /* PorttoPreTests */,
 				3402BB05299A121200505471 /* PorttoPreUITests */,
 				3402BAE3299A121100505471 /* Products */,
+				D929581945AA0FA071106560 /* Pods */,
+				ABD0B0021CD1915A55F61A4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +117,6 @@
 				3402BAE5299A121100505471 /* AppDelegate.swift */,
 				3402BAE7299A121100505471 /* SceneDelegate.swift */,
 				3402BAE9299A121100505471 /* ViewController.swift */,
-				3402BAEB299A121100505471 /* Main.storyboard */,
 				3402BAEE299A121200505471 /* Assets.xcassets */,
 				3402BAF0299A121200505471 /* LaunchScreen.storyboard */,
 				3402BAF3299A121200505471 /* Info.plist */,
@@ -127,6 +141,29 @@
 			path = PorttoPreUITests;
 			sourceTree = "<group>";
 		};
+		ABD0B0021CD1915A55F61A4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B1DABA99FB82ABE08C1D22B /* Pods_PorttoPre.framework */,
+				D71216E59BDB8A5AC1E4598B /* Pods_PorttoPre_PorttoPreUITests.framework */,
+				C11B2347EDD7B4882CAA58B7 /* Pods_PorttoPreTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D929581945AA0FA071106560 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9154BADB6C8EB01EC1858AE /* Pods-PorttoPre.debug.xcconfig */,
+				60A17A09ADED8844997ABADD /* Pods-PorttoPre.release.xcconfig */,
+				C3F3AD7DC3F3EBE6DC70050C /* Pods-PorttoPre-PorttoPreUITests.debug.xcconfig */,
+				4D9A894A43FFA91268AD41A4 /* Pods-PorttoPre-PorttoPreUITests.release.xcconfig */,
+				A59B96D39BA4912D2BADD5F7 /* Pods-PorttoPreTests.debug.xcconfig */,
+				5EEC31DEE7B93868B2106204 /* Pods-PorttoPreTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3402BB0C299A121200505471 /* Build configuration list for PBXNativeTarget "PorttoPre" */;
 			buildPhases = (
+				F8DD41E9E7989B8147DBD419 /* [CP] Check Pods Manifest.lock */,
 				3402BADE299A121100505471 /* Sources */,
 				3402BADF299A121100505471 /* Frameworks */,
 				3402BAE0299A121100505471 /* Resources */,
@@ -151,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3402BB0F299A121200505471 /* Build configuration list for PBXNativeTarget "PorttoPreTests" */;
 			buildPhases = (
+				C59E425EF66A71D8F8660687 /* [CP] Check Pods Manifest.lock */,
 				3402BAF4299A121200505471 /* Sources */,
 				3402BAF5299A121200505471 /* Frameworks */,
 				3402BAF6299A121200505471 /* Resources */,
@@ -169,6 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3402BB12299A121200505471 /* Build configuration list for PBXNativeTarget "PorttoPreUITests" */;
 			buildPhases = (
+				F7730723752E9C4542053BB6 /* [CP] Check Pods Manifest.lock */,
 				3402BAFE299A121200505471 /* Sources */,
 				3402BAFF299A121200505471 /* Frameworks */,
 				3402BB00299A121200505471 /* Resources */,
@@ -233,7 +273,6 @@
 			files = (
 				3402BAF2299A121200505471 /* LaunchScreen.storyboard in Resources */,
 				3402BAEF299A121200505471 /* Assets.xcassets in Resources */,
-				3402BAED299A121100505471 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +291,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C59E425EF66A71D8F8660687 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PorttoPreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7730723752E9C4542053BB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PorttoPre-PorttoPreUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DD41E9E7989B8147DBD419 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PorttoPre-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3402BADE299A121100505471 /* Sources */ = {
@@ -297,14 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3402BAEB299A121100505471 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3402BAEC299A121100505471 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3402BAF0299A121200505471 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +532,7 @@
 		};
 		3402BB0D299A121200505471 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9154BADB6C8EB01EC1858AE /* Pods-PorttoPre.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -441,9 +542,10 @@
 				INFOPLIST_FILE = PorttoPre/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,14 +553,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = shane.PorttoPre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3402BB0E299A121200505471 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A17A09ADED8844997ABADD /* Pods-PorttoPre.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,9 +574,10 @@
 				INFOPLIST_FILE = PorttoPre/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,14 +585,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = shane.PorttoPre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		3402BB10299A121200505471 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59B96D39BA4912D2BADD5F7 /* Pods-PorttoPreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +616,7 @@
 		};
 		3402BB11299A121200505471 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEC31DEE7B93868B2106204 /* Pods-PorttoPreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +636,7 @@
 		};
 		3402BB13299A121200505471 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F3AD7DC3F3EBE6DC70050C /* Pods-PorttoPre-PorttoPreUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +654,7 @@
 		};
 		3402BB14299A121200505471 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D9A894A43FFA91268AD41A4 /* Pods-PorttoPre-PorttoPreUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
