@@ -16,7 +16,11 @@ final class AssetListCoordinator: Coordinator {
     }
     
     func start() {
-        let assetListViewController = AssetListViewController()
+        let ethAddress = "0x85fD692D2a075908079261F5E351e7fE0267dB02"
+        
+        let viewModel = AssetListViewModel(provider: NetworkServiceProvider.shared,
+                                           ethAddress: ethAddress)
+        let assetListViewController = AssetListViewController(viewModel: viewModel)
         presenter.pushViewController(assetListViewController, animated: true)
     }
 }

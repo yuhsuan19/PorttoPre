@@ -24,6 +24,11 @@
 		3402BB28299A26BB00505471 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB27299A26BB00505471 /* APIError.swift */; };
 		3402BB2B299A27B800505471 /* URLRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB2A299A27B800505471 /* URLRequestProvider.swift */; };
 		3402BB2D299AB05E00505471 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB2C299AB05E00505471 /* NetworkServiceProvider.swift */; };
+		3402BB31299AB1F900505471 /* AssetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB30299AB1F900505471 /* AssetListViewModel.swift */; };
+		3402BB34299AB36900505471 /* FetchAssetsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB33299AB36900505471 /* FetchAssetsAPI.swift */; };
+		3402BB37299AB43900505471 /* OpenSeaNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB36299AB43900505471 /* OpenSeaNetworkService.swift */; };
+		3402BB3B299AB60A00505471 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB3A299AB60A00505471 /* Asset.swift */; };
+		3402BB3D299B504700505471 /* FetchAssetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB3C299B504700505471 /* FetchAssetsResponse.swift */; };
 		9BF9BD991E60DBB3C780C117 /* Pods_PorttoPreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B2347EDD7B4882CAA58B7 /* Pods_PorttoPreTests.framework */; };
 		F3948C9217CD7D7D09D7A74F /* Pods_PorttoPre_PorttoPreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71216E59BDB8A5AC1E4598B /* Pods_PorttoPre_PorttoPreUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +72,11 @@
 		3402BB27299A26BB00505471 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		3402BB2A299A27B800505471 /* URLRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestProvider.swift; sourceTree = "<group>"; };
 		3402BB2C299AB05E00505471 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
+		3402BB30299AB1F900505471 /* AssetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListViewModel.swift; sourceTree = "<group>"; };
+		3402BB33299AB36900505471 /* FetchAssetsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAssetsAPI.swift; sourceTree = "<group>"; };
+		3402BB36299AB43900505471 /* OpenSeaNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaNetworkService.swift; sourceTree = "<group>"; };
+		3402BB3A299AB60A00505471 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		3402BB3C299B504700505471 /* FetchAssetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAssetsResponse.swift; sourceTree = "<group>"; };
 		4D9A894A43FFA91268AD41A4 /* Pods-PorttoPre-PorttoPreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5EEC31DEE7B93868B2106204 /* Pods-PorttoPreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPreTests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPreTests/Pods-PorttoPreTests.release.xcconfig"; sourceTree = "<group>"; };
 		60A17A09ADED8844997ABADD /* Pods-PorttoPre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre/Pods-PorttoPre.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +142,7 @@
 			children = (
 				3402BAE5299A121100505471 /* AppDelegate.swift */,
 				3402BAE7299A121100505471 /* SceneDelegate.swift */,
+				3402BB39299AB5F500505471 /* Models */,
 				3402BB20299A25DF00505471 /* Network */,
 				3402BB15299A166900505471 /* Coordinator */,
 				3402BB1A299A17DD00505471 /* ViewControllers */,
@@ -181,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				3402BB1B299A203B00505471 /* AssetListViewController.swift */,
+				3402BB30299AB1F900505471 /* AssetListViewModel.swift */,
 			);
 			path = AssetList;
 			sourceTree = "<group>";
@@ -197,6 +209,7 @@
 		3402BB21299A261900505471 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				3402BB32299AB35700505471 /* APIs */,
 				3402BB2E299AB1A400505471 /* Based */,
 			);
 			path = NetworkService;
@@ -219,6 +232,40 @@
 				3402BB2C299AB05E00505471 /* NetworkServiceProvider.swift */,
 			);
 			path = Based;
+			sourceTree = "<group>";
+		};
+		3402BB32299AB35700505471 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB35299AB41100505471 /* OpenSea */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		3402BB35299AB41100505471 /* OpenSea */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB36299AB43900505471 /* OpenSeaNetworkService.swift */,
+				3402BB38299AB54A00505471 /* FetchAssets */,
+			);
+			path = OpenSea;
+			sourceTree = "<group>";
+		};
+		3402BB38299AB54A00505471 /* FetchAssets */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB33299AB36900505471 /* FetchAssetsAPI.swift */,
+				3402BB3C299B504700505471 /* FetchAssetsResponse.swift */,
+			);
+			path = FetchAssets;
+			sourceTree = "<group>";
+		};
+		3402BB39299AB5F500505471 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB3A299AB60A00505471 /* Asset.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ABD0B0021CD1915A55F61A4F /* Frameworks */ = {
@@ -446,16 +493,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3402BB34299AB36900505471 /* FetchAssetsAPI.swift in Sources */,
 				3402BB1C299A203B00505471 /* AssetListViewController.swift in Sources */,
 				3402BB26299A269900505471 /* NetworkError.swift in Sources */,
 				3402BB17299A168300505471 /* Coordinator.swift in Sources */,
 				3402BB1E299A20DA00505471 /* AssetListCoordinator.swift in Sources */,
 				3402BB19299A16EF00505471 /* AppCoordinator.swift in Sources */,
+				3402BB37299AB43900505471 /* OpenSeaNetworkService.swift in Sources */,
 				3402BB2B299A27B800505471 /* URLRequestProvider.swift in Sources */,
 				3402BAE6299A121100505471 /* AppDelegate.swift in Sources */,
+				3402BB31299AB1F900505471 /* AssetListViewModel.swift in Sources */,
 				3402BAE8299A121100505471 /* SceneDelegate.swift in Sources */,
 				3402BB23299A263A00505471 /* NetworkService.swift in Sources */,
+				3402BB3B299AB60A00505471 /* Asset.swift in Sources */,
 				3402BB2D299AB05E00505471 /* NetworkServiceProvider.swift in Sources */,
+				3402BB3D299B504700505471 /* FetchAssetsResponse.swift in Sources */,
 				3402BB28299A26BB00505471 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
