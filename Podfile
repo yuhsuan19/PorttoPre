@@ -6,6 +6,7 @@ target 'PorttoPre' do
   use_frameworks!
 
   # Pods for PorttoPre
+  pod 'Kingfisher'
 
   target 'PorttoPreTests' do
     inherit! :search_paths

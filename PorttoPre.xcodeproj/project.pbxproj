@@ -29,6 +29,8 @@
 		3402BB37299AB43900505471 /* OpenSeaNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB36299AB43900505471 /* OpenSeaNetworkService.swift */; };
 		3402BB3B299AB60A00505471 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB3A299AB60A00505471 /* Asset.swift */; };
 		3402BB3D299B504700505471 /* FetchAssetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB3C299B504700505471 /* FetchAssetsResponse.swift */; };
+		3402BB42299B8B1B00505471 /* AssetListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB41299B8B1B00505471 /* AssetListCollectionView.swift */; };
+		3402BB44299B8B5300505471 /* AssetListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB43299B8B5300505471 /* AssetListCollectionViewCell.swift */; };
 		9BF9BD991E60DBB3C780C117 /* Pods_PorttoPreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B2347EDD7B4882CAA58B7 /* Pods_PorttoPreTests.framework */; };
 		F3948C9217CD7D7D09D7A74F /* Pods_PorttoPre_PorttoPreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71216E59BDB8A5AC1E4598B /* Pods_PorttoPre_PorttoPreUITests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		3402BB36299AB43900505471 /* OpenSeaNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaNetworkService.swift; sourceTree = "<group>"; };
 		3402BB3A299AB60A00505471 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		3402BB3C299B504700505471 /* FetchAssetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAssetsResponse.swift; sourceTree = "<group>"; };
+		3402BB41299B8B1B00505471 /* AssetListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListCollectionView.swift; sourceTree = "<group>"; };
+		3402BB43299B8B5300505471 /* AssetListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D9A894A43FFA91268AD41A4 /* Pods-PorttoPre-PorttoPreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5EEC31DEE7B93868B2106204 /* Pods-PorttoPreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPreTests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPreTests/Pods-PorttoPreTests.release.xcconfig"; sourceTree = "<group>"; };
 		60A17A09ADED8844997ABADD /* Pods-PorttoPre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre/Pods-PorttoPre.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			children = (
 				3402BB1B299A203B00505471 /* AssetListViewController.swift */,
 				3402BB30299AB1F900505471 /* AssetListViewModel.swift */,
+				3402BB3E299B8AD800505471 /* Views */,
 			);
 			path = AssetList;
 			sourceTree = "<group>";
@@ -268,6 +273,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3402BB3E299B8AD800505471 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB41299B8B1B00505471 /* AssetListCollectionView.swift */,
+				3402BB43299B8B5300505471 /* AssetListCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ABD0B0021CD1915A55F61A4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +316,7 @@
 				3402BADE299A121100505471 /* Sources */,
 				3402BADF299A121100505471 /* Frameworks */,
 				3402BAE0299A121100505471 /* Resources */,
+				3CD4418AE07565EAF0D1888E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,6 +354,7 @@
 				3402BAFE299A121200505471 /* Sources */,
 				3402BAFF299A121200505471 /* Frameworks */,
 				3402BB00299A121200505471 /* Resources */,
+				8129D6A0FFE32079B7ABE51F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -420,6 +436,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3CD4418AE07565EAF0D1888E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PorttoPre/Pods-PorttoPre-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PorttoPre/Pods-PorttoPre-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PorttoPre/Pods-PorttoPre-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8129D6A0FFE32079B7ABE51F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C59E425EF66A71D8F8660687 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,12 +545,14 @@
 			files = (
 				3402BB34299AB36900505471 /* FetchAssetsAPI.swift in Sources */,
 				3402BB1C299A203B00505471 /* AssetListViewController.swift in Sources */,
+				3402BB42299B8B1B00505471 /* AssetListCollectionView.swift in Sources */,
 				3402BB26299A269900505471 /* NetworkError.swift in Sources */,
 				3402BB17299A168300505471 /* Coordinator.swift in Sources */,
 				3402BB1E299A20DA00505471 /* AssetListCoordinator.swift in Sources */,
 				3402BB19299A16EF00505471 /* AppCoordinator.swift in Sources */,
 				3402BB37299AB43900505471 /* OpenSeaNetworkService.swift in Sources */,
 				3402BB2B299A27B800505471 /* URLRequestProvider.swift in Sources */,
+				3402BB44299B8B5300505471 /* AssetListCollectionViewCell.swift in Sources */,
 				3402BAE6299A121100505471 /* AppDelegate.swift in Sources */,
 				3402BB31299AB1F900505471 /* AssetListViewModel.swift in Sources */,
 				3402BAE8299A121100505471 /* SceneDelegate.swift in Sources */,

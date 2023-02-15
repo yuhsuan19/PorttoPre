@@ -11,11 +11,9 @@ final class AssetListViewModel {
     
     let ethAddress: String
     
-    var assets: [Asset] = [] {
-        didSet {
-            print(assets)
-        }
-    }
+    var assets: [Asset] = []
+    
+    var onAssetsFetched: ((Error?) -> Void)?
     
     private let perPageCount: Int
     
@@ -35,9 +33,10 @@ final class AssetListViewModel {
             switch result {
             case .success(let response):
                 self.assets.append(contentsOf: response.assets)
+                self.onAssetsFetched?(nil)
                 
             case .failure(let error):
-                break
+                self.onAssetsFetched?(error)
             }
         }
     }
