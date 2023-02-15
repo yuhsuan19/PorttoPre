@@ -7,19 +7,27 @@
 
 import UIKit
 
+protocol AssetListViewControllerDelegate: AnyObject {
+    func assetListViewControlerDidSelectAsset(_ selectedAsset: Asset) -> Void
+}
+
 final class AssetListViewController: UIViewController {
-    
+        
     private let viewModel: AssetListViewModel
     
-    private lazy var collectionView: AssetListCollectionView = {
+    private weak var delegate: AssetListViewControllerDelegate?
+    
+    private lazy var assetListCollectionView: AssetListCollectionView = {
         let collectionView = AssetListCollectionView()
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
         return collectionView
     }()
     
     // MARK: - Object life cycle
-    init(viewModel: AssetListViewModel) {
+    init(viewModel: AssetListViewModel, delegate: AssetListViewControllerDelegate? = nil) {
         self.viewModel = viewModel
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,19 +47,31 @@ final class AssetListViewController: UIViewController {
     private func setUpViews() {
         title = "ETH"
         
-        view.addSubview(collectionView)
+        view.addSubview(assetListCollectionView)
         NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            assetListCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            assetListCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            assetListCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            assetListCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     
     private func bindViewModel() {
         viewModel.onAssetsFetched = { [weak self] (error) in
             guard let self = self else { return }
-            self.collectionView.setAssets(self.viewModel.assets)
+            self.assetListCollectionView.setAssets(self.viewModel.assets)
+        }
+    }
+}
+
+// MARK: - UICollectionView Delegate
+extension AssetListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case assetListCollectionView:
+            delegate?.assetListViewControlerDidSelectAsset(viewModel.assets[indexPath.item])
+        default:
+            break
         }
     }
 }

@@ -17,7 +17,7 @@ final class NetworkServiceProvider {
         self.urlRequestProvider = urlRequestProivder
     }
     
-    @discardableResult func request<Model: Decodable>(for service: NetworkService, modelType: Model.Type, keyPath: String = "data", completion: @escaping (Result<Model, Error>) -> Void) -> URLSessionDataTask {
+    @discardableResult func request<Model: Decodable>(for service: NetworkService, modelType: Model.Type, completion: @escaping (Result<Model, Error>) -> Void) -> URLSessionDataTask {
         return urlRequestProvider.request(urlResquest: service.request) { result in
             switch result {
             case.success(let networkResponse):

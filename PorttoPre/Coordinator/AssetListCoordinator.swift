@@ -10,6 +10,9 @@ import UIKit
 
 final class AssetListCoordinator: Coordinator {
     private let presenter: UINavigationController
+    private var assetListViewController: AssetListViewController?
+    private var assetDetailCoordinator: AssetDetailCoordinator?
+    
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -20,7 +23,16 @@ final class AssetListCoordinator: Coordinator {
         
         let viewModel = AssetListViewModel(provider: NetworkServiceProvider.shared,
                                            ethAddress: ethAddress)
-        let assetListViewController = AssetListViewController(viewModel: viewModel)
+        let assetListViewController = AssetListViewController(viewModel: viewModel, delegate: self)
+        self.assetListViewController = assetListViewController
         presenter.pushViewController(assetListViewController, animated: true)
+    }
+}
+
+extension AssetListCoordinator: AssetListViewControllerDelegate {
+    func assetListViewControlerDidSelectAsset(_ selectedAsset: Asset) {
+        let assetDetailCoordinator = AssetDetailCoordinator(presenter: presenter, asset: selectedAsset)
+        self.assetDetailCoordinator = assetDetailCoordinator
+        assetDetailCoordinator.start()
     }
 }
