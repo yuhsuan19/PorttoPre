@@ -23,16 +23,14 @@ final class AssetListCoordinator: Coordinator {
         
         let viewModel = AssetListViewModel(provider: NetworkServiceProvider.shared,
                                            ethAddress: ethAddress)
-        let assetListViewController = AssetListViewController(viewModel: viewModel, delegate: self)
-        self.assetListViewController = assetListViewController
-        presenter.pushViewController(assetListViewController, animated: true)
+        assetListViewController = AssetListViewController(viewModel: viewModel, delegate: self)
+        presenter.pushViewController(assetListViewController!, animated: true)
     }
 }
 
 extension AssetListCoordinator: AssetListViewControllerDelegate {
     func assetListViewControlerDidSelectAsset(_ selectedAsset: Asset) {
-        let assetDetailCoordinator = AssetDetailCoordinator(presenter: presenter, asset: selectedAsset)
-        self.assetDetailCoordinator = assetDetailCoordinator
-        assetDetailCoordinator.start()
+        assetDetailCoordinator = AssetDetailCoordinator(presenter: presenter, asset: selectedAsset)
+        assetDetailCoordinator?.start()
     }
 }
