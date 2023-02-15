@@ -7,6 +7,7 @@ target 'PorttoPre' do
 
   # Pods for PorttoPre
   pod 'Kingfisher'
+  pod 'ProgressHUD'
 
   target 'PorttoPreTests' do
     inherit! :search_paths

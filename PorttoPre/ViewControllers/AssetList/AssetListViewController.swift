@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 protocol AssetListViewControllerDelegate: AnyObject {
     func assetListViewControlerDidSelectAsset(_ selectedAsset: Asset) -> Void
@@ -57,6 +58,14 @@ final class AssetListViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        viewModel.onIsLoadingChanged = { [weak self] in
+            if (self?.viewModel.isLoading ?? false) && (self?.viewModel.assets.isEmpty ?? false) {
+                ProgressHUD.show()
+            } else {
+                ProgressHUD.dismiss()
+            }
+        }
+        
         viewModel.onAssetsFetched = { [weak self] (error) in
             guard let self = self else { return }
             self.assetListCollectionView.setAssets(self.viewModel.assets)
@@ -71,6 +80,17 @@ extension AssetListViewController: UICollectionViewDelegate {
         case assetListCollectionView:
             delegate?.assetListViewControlerDidSelectAsset(viewModel.assets[indexPath.item])
         default:
+            break
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case assetListCollectionView:
+            if indexPath.item > viewModel.assets.count - 8 {
+                viewModel.fetchAssets()
+            }
+         default:
             break
         }
     }

@@ -11,6 +11,15 @@ final class AssetListViewModel {
     
     let ethAddress: String
     
+    private(set) var isLoading: Bool = false {
+        didSet {
+            onIsLoadingChanged?()
+        }
+    }
+    private var isLoadAll: Bool = false
+    
+    var onIsLoadingChanged: (() -> Void)?
+    
     var assets: [Asset] = []
     
     var onAssetsFetched: ((Error?) -> Void)?
@@ -27,17 +36,22 @@ final class AssetListViewModel {
     }
     
     func fetchAssets() {
+        guard !isLoading && !isLoadAll else { return }
+        
+        isLoading = true
         provider.request(for: FetchAssetsAPI(owner: ethAddress,
-                                             perPageAmount: perPageCount, offset: 0),
+                                             perPageAmount: perPageCount,
+                                             offset: assets.count),
                          modelType: FetchAssetsResponse.self) { result in
             switch result {
             case .success(let response):
                 self.assets.append(contentsOf: response.assets)
                 self.onAssetsFetched?(nil)
-                
+                self.isLoadAll = (response.assets.count < self.perPageCount)
             case .failure(let error):
                 self.onAssetsFetched?(error)
             }
+            self.isLoading = false
         }
     }
 }

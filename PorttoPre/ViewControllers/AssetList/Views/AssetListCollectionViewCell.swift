@@ -42,6 +42,8 @@ final class AssetListCollectionViewCell: UICollectionViewCell {
     }
     
     private func setUpViews() {
+        contentView.backgroundColor = .systemBackground
+        
         contentView.addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
