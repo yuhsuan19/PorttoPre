@@ -11,23 +11,16 @@ final class AssetListViewModel {
     
     let ethAddress: String
     
-    private(set) var isLoading: Bool = false {
-        didSet {
-            onIsLoadingChanged?()
-        }
-    }
-    private var isLoadAll: Bool = false
-    
-    var onIsLoadingChanged: (() -> Void)?
-    
-    var assets: [Asset] = []
-    
-    var onAssetsFetched: ((Error?) -> Void)?
-    
-    private let perPageCount: Int
-    
     private let provider: NetworkServiceProvider
     
+    private(set) var isLoading: Bool = false {
+        didSet {
+            onLoadingStatusChange?()
+        }
+    }
+    
+    var onLoadingStatusChange: (() -> Void)?
+        
     init(provider: NetworkServiceProvider, ethAddress: String, perPageAmount: Int = 20) {
         self.provider = provider
         
@@ -35,8 +28,21 @@ final class AssetListViewModel {
         self.perPageCount = perPageAmount
     }
     
+    // MARK: - Assets
+    private(set) var assets: [Asset] = [] {
+        didSet {
+            onAssetsFetch?()
+        }
+    }
+    
+    var onAssetsFetch: (() -> Void)?
+
+    private var allAssetsLoaded: Bool = false
+
+    private let perPageCount: Int
+    
     func fetchAssets() {
-        guard !isLoading && !isLoadAll else { return }
+        guard !isLoading && !allAssetsLoaded else { return }
         
         isLoading = true
         provider.request(for: FetchAssetsAPI(owner: ethAddress,
@@ -46,12 +52,34 @@ final class AssetListViewModel {
             switch result {
             case .success(let response):
                 self.assets.append(contentsOf: response.assets)
-                self.onAssetsFetched?(nil)
-                self.isLoadAll = (response.assets.count < self.perPageCount)
+                self.onAssetsFetch?()
+                self.allAssetsLoaded = (response.assets.count < self.perPageCount)
+                
             case .failure(let error):
-                self.onAssetsFetched?(error)
+                print(error)
             }
             self.isLoading = false
+        }
+    }
+    
+    // MARK: - Eth Balance
+    private(set) var ethBalance: Int64? = nil {
+        didSet {
+            onETHBalanceFetch?()
+        }
+    }
+    var onETHBalanceFetch: (() -> Void)?
+    
+    func fetchEthBalance() {
+        provider.request(for: FetchEthBalance(ethAddress: ethAddress),
+                         modelType: FetchEthBalanceResponse.self) { result in
+            switch result {
+            case .success(let response):
+                self.ethBalance = response.balance
+                
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }

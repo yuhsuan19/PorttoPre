@@ -19,9 +19,8 @@ final class AssetListViewController: UIViewController {
     private weak var delegate: AssetListViewControllerDelegate?
     
     private lazy var assetListCollectionView: AssetListCollectionView = {
-        let collectionView = AssetListCollectionView()
+        let collectionView = AssetListCollectionView(delegate: self)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.delegate = self
         return collectionView
     }()
     
@@ -43,10 +42,11 @@ final class AssetListViewController: UIViewController {
         bindViewModel()
         
         viewModel.fetchAssets()
+        viewModel.fetchEthBalance()
     }
 
     private func setUpViews() {
-        title = "ETH"
+        title = "Balance: Fetching..."
         
         view.addSubview(assetListCollectionView)
         NSLayoutConstraint.activate([
@@ -58,7 +58,7 @@ final class AssetListViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.onIsLoadingChanged = { [weak self] in
+        viewModel.onLoadingStatusChange = { [weak self] in
             if (self?.viewModel.isLoading ?? false) && (self?.viewModel.assets.isEmpty ?? false) {
                 ProgressHUD.show()
             } else {
@@ -66,9 +66,17 @@ final class AssetListViewController: UIViewController {
             }
         }
         
-        viewModel.onAssetsFetched = { [weak self] (error) in
+        viewModel.onAssetsFetch = { [weak self] in
             guard let self = self else { return }
             self.assetListCollectionView.setAssets(self.viewModel.assets)
+        }
+        
+        viewModel.onETHBalanceFetch = { [weak self] in
+            guard let ethBalance = self?.viewModel.ethBalance else {
+                self?.title = "Balance: Fail to Fetch"
+                return
+            }
+            self?.title = "Balance: \(ethBalance) eth"
         }
     }
 }

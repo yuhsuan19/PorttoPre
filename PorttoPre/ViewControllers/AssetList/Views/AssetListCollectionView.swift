@@ -20,7 +20,7 @@ final class AssetListCollectionView: UICollectionView {
         }
     }
     
-    init(frame: CGRect = .zero) {
+    init(frame: CGRect = .zero, delegate: UICollectionViewDelegate?) {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = Self.itemSize
         layout.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
@@ -28,6 +28,7 @@ final class AssetListCollectionView: UICollectionView {
         backgroundColor = .clear
         register(AssetListCollectionViewCell.self, forCellWithReuseIdentifier: "AssetListCell")
         dataSource = self
+        self.delegate = delegate
     }
     
     required init?(coder: NSCoder) {
