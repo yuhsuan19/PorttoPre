@@ -116,9 +116,10 @@ final class AssetDetailViewController: UIViewController {
     private func bindViewModel() {
         title = viewModel.asset.collection?.name
         
-        assetImageView.kf.setImage(with: viewModel.asset.imageURL) { result in
+        assetImageView.setKingFisherImage(url: viewModel.asset.imageURL) { result in
             self.updateAssetImage(result: result)
         }
+        
         nameLabel.text = viewModel.asset.name
         descriptionLable.text = viewModel.asset.description
     }

@@ -37,6 +37,7 @@
 		3402BB4E299E0EF300505471 /* InfuraNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB4D299E0EF300505471 /* InfuraNetworkService.swift */; };
 		3402BB51299E104400505471 /* FetchEthBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB50299E104400505471 /* FetchEthBalance.swift */; };
 		3402BB53299E127100505471 /* FetchEthBalanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB52299E127100505471 /* FetchEthBalanceResponse.swift */; };
+		3402BB59299E5DD900505471 /* Kingsher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402BB58299E5DD900505471 /* Kingsher+Extension.swift */; };
 		9BF9BD991E60DBB3C780C117 /* Pods_PorttoPreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B2347EDD7B4882CAA58B7 /* Pods_PorttoPreTests.framework */; };
 		F3948C9217CD7D7D09D7A74F /* Pods_PorttoPre_PorttoPreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71216E59BDB8A5AC1E4598B /* Pods_PorttoPre_PorttoPreUITests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		3402BB4D299E0EF300505471 /* InfuraNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfuraNetworkService.swift; sourceTree = "<group>"; };
 		3402BB50299E104400505471 /* FetchEthBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEthBalance.swift; sourceTree = "<group>"; };
 		3402BB52299E127100505471 /* FetchEthBalanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEthBalanceResponse.swift; sourceTree = "<group>"; };
+		3402BB58299E5DD900505471 /* Kingsher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kingsher+Extension.swift"; sourceTree = "<group>"; };
 		4D9A894A43FFA91268AD41A4 /* Pods-PorttoPre-PorttoPreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre-PorttoPreUITests/Pods-PorttoPre-PorttoPreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5EEC31DEE7B93868B2106204 /* Pods-PorttoPreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPreTests.release.xcconfig"; path = "Target Support Files/Pods-PorttoPreTests/Pods-PorttoPreTests.release.xcconfig"; sourceTree = "<group>"; };
 		60A17A09ADED8844997ABADD /* Pods-PorttoPre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PorttoPre.release.xcconfig"; path = "Target Support Files/Pods-PorttoPre/Pods-PorttoPre.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				3402BAE5299A121100505471 /* AppDelegate.swift */,
 				3402BAE7299A121100505471 /* SceneDelegate.swift */,
+				3402BB57299E5DB900505471 /* Extensions */,
 				3402BB39299AB5F500505471 /* Models */,
 				3402BB20299A25DF00505471 /* Network */,
 				3402BB15299A166900505471 /* Coordinator */,
@@ -322,6 +325,14 @@
 				3402BB52299E127100505471 /* FetchEthBalanceResponse.swift */,
 			);
 			path = GetEthBalance;
+			sourceTree = "<group>";
+		};
+		3402BB57299E5DB900505471 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3402BB58299E5DD900505471 /* Kingsher+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		ABD0B0021CD1915A55F61A4F /* Frameworks */ = {
@@ -602,6 +613,7 @@
 				3402BB2B299A27B800505471 /* URLRequestProvider.swift in Sources */,
 				3402BB44299B8B5300505471 /* AssetListCollectionViewCell.swift in Sources */,
 				3402BAE6299A121100505471 /* AppDelegate.swift in Sources */,
+				3402BB59299E5DD900505471 /* Kingsher+Extension.swift in Sources */,
 				3402BB31299AB1F900505471 /* AssetListViewModel.swift in Sources */,
 				3402BAE8299A121100505471 /* SceneDelegate.swift in Sources */,
 				3402BB23299A263A00505471 /* NetworkService.swift in Sources */,

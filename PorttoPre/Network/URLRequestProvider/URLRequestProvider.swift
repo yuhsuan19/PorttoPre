@@ -22,12 +22,16 @@ final class URLRequestProvider {
         
         let dataTask = URLSession.shared.dataTask(with: urlResquest) { data, response, error in
             if let error = error {
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
                 return
             }
             
             guard let data = data, let response = response as? HTTPURLResponse else {
-                completion(.failure(NetworkError.missingResponse))
+                DispatchQueue.main.async {
+                    completion(.failure(NetworkError.missingResponse))
+                }
                 return
             }
             

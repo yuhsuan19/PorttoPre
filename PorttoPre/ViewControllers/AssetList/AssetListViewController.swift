@@ -48,6 +48,8 @@ final class AssetListViewController: UIViewController {
     private func setUpViews() {
         title = "Balance: Fetching..."
         
+        view.backgroundColor = .systemBackground
+        
         view.addSubview(assetListCollectionView)
         NSLayoutConstraint.activate([
             assetListCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

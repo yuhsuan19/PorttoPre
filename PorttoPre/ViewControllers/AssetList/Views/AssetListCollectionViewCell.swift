@@ -67,6 +67,6 @@ final class AssetListCollectionViewCell: UICollectionViewCell {
     
     private func update() {
         label.text = asset?.name
-        imageView.kf.setImage(with: asset?.thumbnailURL)
+        imageView.setKingFisherImage(url: asset?.thumbnailURL)
     }
 }

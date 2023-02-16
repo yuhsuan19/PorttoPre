@@ -25,4 +25,8 @@ extension InfuraNetworkService {
     var headers: [String : String]? {
         [ "Content-Type": "application/json" ]
     }
+    
+    var timeout: TimeInterval {
+        20
+    }
 }

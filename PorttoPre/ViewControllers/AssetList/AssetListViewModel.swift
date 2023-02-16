@@ -56,6 +56,7 @@ final class AssetListViewModel {
                 self.allAssetsLoaded = (response.assets.count < self.perPageCount)
                 
             case .failure(let error):
+                // to do: error handling
                 print(error)
             }
             self.isLoading = false
@@ -79,6 +80,7 @@ final class AssetListViewModel {
                 
             case .failure(let error):
                 print(error)
+                self.ethBalance = nil
             }
         }
     }
