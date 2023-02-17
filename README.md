@@ -13,6 +13,5 @@ Pretest for Portto
     - [x] Show asset information (image, name and description) 
     - [x] Open permalink with a floating button 
 ## Third parties used (manage with CocoaPods)
-  * [Alamofire](https://github.com/Alamofire/Alamofire) - Network requesting
   * [Kingfisher](https://github.com/onevcat/Kingfisher) - Image downloading and chache
   * [SVGKit](https://github.com/SVGKit/SVGKit) - Processing .svg file
